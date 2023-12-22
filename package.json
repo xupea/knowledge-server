@@ -21,7 +21,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "lowdb": "^1.0.0",
     "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
     "@types/koa__cors": "^4.0.1",
@@ -33,6 +32,7 @@
     "koa-body": "^6.0.1",
     "koa-helmet": "^7.0.2",
     "koa-static": "^5.0.0",
+    "lowdb": "^1.0.0",
     "mongoose": "^7.5.3",
     "socket.io": "^4.7.2",
     "winston": "^3.10.0"

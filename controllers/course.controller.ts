@@ -31,7 +31,9 @@ const getAllArticlesById = async (ctx: Context) => {
   const aid = ctx.params.aid;
   const course = db
     .get("courses")
-    .filter((course) => course.content.some((item) => item.id === +aid))
+    .filter((course: any) =>
+      course.content.some((item: any) => item.id === +aid)
+    )
     .head()
     .value();
   console.log(course);

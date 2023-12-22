@@ -1,3 +1,4 @@
+import "dotenv/config";
 import Koa from "koa";
 import helmet from "koa-helmet";
 import { koaBody } from "koa-body";
@@ -23,4 +24,6 @@ app.use(koaStatic());
 // v1 api routes
 app.use(rootRouter.routes());
 
-app.listen(8080);
+app.listen(process.env.PORT, () =>
+  console.log("server is up and listen to", process.env.PORT)
+);
