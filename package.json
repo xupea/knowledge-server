@@ -6,7 +6,7 @@
   "scripts": {
     "gen-db": "node script/generate-db.js",
     "start": "cross-env NODE_ENV=development concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "online": "node dist/index.js"
+    "online": "npx tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "",
