@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen-db": "node script/generate-db.js",
+    "start": "cross-env NODE_ENV=development concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "online": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.9",
+    "@types/koa__router": "^12.0.1",
+    "@types/koa-static": "^4.0.2",
+    "@types/node": "^20.7.0",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "lowdb": "^1.0.0",
+    "@koa/cors": "^4.0.0",
+    "@koa/router": "^12.0.0",
+    "@types/koa__cors": "^4.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "http-status": "^1.7.0",
+    "joi": "^17.10.2",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa-helmet": "^7.0.2",
+    "koa-static": "^5.0.0",
+    "mongoose": "^7.5.3",
+    "socket.io": "^4.7.2",
+    "winston": "^3.10.0"
+  }
+}
