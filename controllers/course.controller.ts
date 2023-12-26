@@ -11,8 +11,10 @@ const adapter = new FileSync("db.json");
 const db = low(adapter);
 
 const getAll = async (ctx: Context) => {
-  const courses = db.get("courses").value();
-  console.log(courses);
+  const courses = db
+    .get("courses")
+    // .map((id: string, path: string, title: string) => ({ id, path, title }))
+    .value();
 
   ctx.status = httpStatus.OK;
   ctx.body = courses;
@@ -20,8 +22,9 @@ const getAll = async (ctx: Context) => {
 
 const getArticleById = async (ctx: Context) => {
   const aid = ctx.params.aid;
-  const courses = db.get("courses").value();
-  console.log(courses);
+  const courses = db
+    .get("courses")
+    .value();
 
   ctx.status = httpStatus.OK;
   ctx.body = courses;
@@ -36,7 +39,6 @@ const getAllArticlesById = async (ctx: Context) => {
     )
     .head()
     .value();
-  console.log(course);
 
   ctx.status = httpStatus.OK;
   ctx.body = course;
